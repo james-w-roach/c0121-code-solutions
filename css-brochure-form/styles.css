@@ -1,0 +1,59 @@
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h3 {
+  text-align: center;
+  font-family: 'Brandon Grotesque', sans-serif;
+  color: rgb(224, 55, 12);
+}
+
+label {
+  font-family: 'Brandon Grotesque', sans-serif;
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin-left: 10px;
+  color: rgb(39, 38, 38);
+}
+
+input {
+  width: 415px;
+  border-radius: 7px;
+  border-style: solid;
+  border-color: lightgray;
+  font-family: 'AtlasGrotesk', sans-serif;
+  padding: 10px 10px 10px 10px;
+}
+
+#engineers {
+  width: 415px;
+  padding: 10px 3px 10px 3px;
+  background-color: rgb(231, 228, 228);
+  border-radius: 5px;
+  border-color: lightgray;
+  font-family: 'Brandon Grotesque', sans-serif;
+}
+
+.pesky-submit {
+  display: flex;
+  justify-content: flex-end;
+  margin: auto;
+  width: 415px;
+}
+
+#sub {
+  border-radius: 20px;
+  border-style: none;
+  font-family: 'Brandon Grotesque', sans-serif;
+  background-color: rgb(224, 55, 12);
+  color: white;
+  width: 90px;
+  padding: 6px 6px;
+}
+
+section {
+  margin-bottom: 10px;
+}
