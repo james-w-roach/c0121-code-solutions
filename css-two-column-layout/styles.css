@@ -1,0 +1,63 @@
+.header1 {
+  font-family: 'Karla', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.header2 {
+  font-family: 'Karla', sans-serif;
+  font-weight: 400;
+  width: 250px;
+  font-size: 0.7rem;
+}
+
+.text {
+  font-family: 'Karla', sans-serif;
+  font-size: 0.7rem;
+  line-height: 1.5rem;
+}
+
+.row1 {
+  text-align: center;
+  width: 500px;
+  margin: auto;
+}
+
+.row2 {
+  display: flex;
+  margin: auto;
+  width: 1000px;
+  justify-content: center;
+}
+
+.column {
+  display: flex;
+  flex-basis: 20%;
+  margin: 30px;
+}
+
+.img-container {
+  width: 100px;
+  height: 100px;
+}
+
+.text-chunk {
+  width: 210px;
+  padding-top: 20px;
+}
+
+img {
+  width: 100%;
+}
+
+.learn-more {
+  border: solid;
+  border-color: orangered;
+  border-width: 2px;
+  color: orangered;
+  background-color: white;
+  font-family: 'Karla', sans-serif;
+  font-size: 0.7rem;
+  width: 35%;
+  margin: auto;
+}
