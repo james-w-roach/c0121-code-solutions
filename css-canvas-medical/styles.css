@@ -1,0 +1,188 @@
+.navbar {
+  display: flex;
+  margin: auto;
+  width: 60rem;
+  padding-left: 4.5rem;
+  padding-right: 4.5rem;
+  align-items: center;
+  border-bottom: solid 0.05rem rgb(224, 223, 223);
+}
+
+.photo-section {
+  margin: 3.5rem auto;
+  width: 51rem;
+  height: 27rem;
+  background-image: url('images/hero.jpg');
+  background-size: cover;
+  position: relative;
+}
+
+.overlay {
+  background: rgba(61, 61, 61, 0.3);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.photo {
+  color: white;
+  width: 23rem;
+  position: absolute;
+  top: 2.5rem;
+  left: 4rem;
+}
+
+.clinicians {
+  background-color: rgb(247, 246, 246);
+  margin: auto;
+  width: 60rem;
+  padding: 2rem;
+  color: rgb(115, 116, 117);
+}
+
+.learn-more {
+  display: flex;
+  margin: auto;
+  margin-bottom: 2rem;
+  width: 50rem;
+  justify-content: space-between;
+  color: rgb(115, 116, 117);
+}
+
+.gray-box {
+  background-color: rgb(85, 86, 87);
+  color: white;
+  width: 60rem;
+  margin: auto;
+  padding: 4.5rem 2rem;
+}
+
+.lower-bar {
+  width: 60rem;
+  margin: auto;
+  padding: 2rem 5rem;
+  display: flex;
+  background-color: rgb(247, 246, 246);
+  font-size: 0.9rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.row-gray {
+  display: flex;
+}
+
+.column2 {
+  flex-basis: 30%;
+  padding-top: 1rem;
+  position: relative;
+}
+
+.column3 {
+  flex-basis: 8rem;
+  color: rgb(115, 116, 117);
+  font-family: 'Avenir', sans-serif;
+}
+
+.column-half {
+  flex-basis: 50%;
+  padding: 2rem;
+}
+
+.column-4th {
+  flex-basis: 25%;
+  font-family: 'Avenir', sans-serif;
+  padding-top: 1rem;
+}
+
+.column45 {
+  flex-basis: 45%;
+}
+
+.column55 {
+  font-family: 'Avenir', sans-serif;
+  font-size: 0.8rem;
+  color: rgb(169, 170, 172);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-basis: 55%;
+}
+
+.cu {
+  background-color: rgb(36, 61, 109);
+  color: white;
+  border-radius: 0.15rem;
+  padding: 0.4rem 0.6rem;
+}
+
+.heading {
+  font-family: 'Tiempos Headline', serif;
+  font-weight: lighter;
+}
+
+.text-center {
+  text-align: center;
+  font-family: 'Avenir', sans-serif;
+}
+
+.text-small {
+  font-family: 'Avenir', sans-serif;
+  font-size: 0.7rem;
+}
+
+#text1 {
+  font-size: 0.7rem;
+  line-height: 1.5rem;
+}
+
+#text2,
+#text3 {
+  line-height: 2.5rem;
+}
+
+#text4 {
+  font-family: 'Avenir', sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.3rem;
+}
+
+#text5 {
+  line-height: 0.5rem;
+}
+
+.text-chunk {
+  width: 20rem;
+  text-align: center;
+}
+
+.button-box {
+  background-color: rgb(36, 61, 109);
+  color: white;
+  border: none;
+  border-radius: 0.2rem;
+  width: 10rem;
+  height: 2.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#gs {
+  position: absolute;
+  right: 0;
+  top: 2.5rem;
+}
+
+.canvas-heading {
+  width: 7rem;
+}
+
+img {
+  width: 100%;
+}
