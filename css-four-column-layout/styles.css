@@ -1,0 +1,34 @@
+body {
+  background-color: rgb(250, 250, 250);
+}
+
+.heading,
+.text {
+  text-align: center;
+  font-family: 'Barlow', sans-serif;
+}
+
+.row {
+  display: flex;
+  margin: auto;
+  width: 100rem;
+  justify-content: center;
+}
+
+.column {
+  flex-basis: 20%;
+}
+
+.img-container1 {
+  width: 18rem;
+  margin: auto;
+}
+
+.img-container2 {
+  width: 4rem;
+  margin: auto;
+}
+
+img {
+  width: 100%;
+}
