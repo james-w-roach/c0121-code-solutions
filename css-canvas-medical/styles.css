@@ -62,10 +62,47 @@
 .lower-bar {
   width: 60rem;
   margin: auto;
-  padding: 2rem 5rem;
+  padding: 2rem 4rem;
   display: flex;
   background-color: rgb(247, 246, 246);
   font-size: 0.9rem;
+}
+
+.heading {
+  font-family: 'Tiempos Headline', serif;
+  font-weight: lighter;
+}
+
+.text {
+  font-family: 'Avenir', sans-serif;
+}
+
+.center {
+  text-align: center;
+}
+
+.tiny-text-small-height {
+  font-size: 0.7rem;
+  line-height: 0.5rem;
+}
+
+.tiny-text-medium-height {
+  font-size: 0.7rem;
+  line-height: 1.5rem;
+}
+
+.small-text-medium-height {
+  font-size: 0.8rem;
+  line-height: 1.3rem;
+}
+
+.large-height {
+  line-height: 2.5rem;
+}
+
+.text-chunk {
+  width: 20rem;
+  text-align: center;
 }
 
 .row {
@@ -75,18 +112,18 @@
 
 .row-gray {
   display: flex;
+  padding-bottom: 1rem;
 }
 
-.column2 {
+.column30 {
   flex-basis: 30%;
   padding-top: 1rem;
   position: relative;
 }
 
-.column3 {
+.column8rem {
   flex-basis: 8rem;
   color: rgb(115, 116, 117);
-  font-family: 'Avenir', sans-serif;
 }
 
 .column-half {
@@ -96,7 +133,6 @@
 
 .column-4th {
   flex-basis: 25%;
-  font-family: 'Avenir', sans-serif;
   padding-top: 1rem;
 }
 
@@ -105,7 +141,6 @@
 }
 
 .column55 {
-  font-family: 'Avenir', sans-serif;
   font-size: 0.8rem;
   color: rgb(169, 170, 172);
   display: flex;
@@ -114,51 +149,11 @@
   flex-basis: 55%;
 }
 
-.cu {
+.contact-us {
   background-color: rgb(36, 61, 109);
   color: white;
   border-radius: 0.15rem;
   padding: 0.4rem 0.6rem;
-}
-
-.heading {
-  font-family: 'Tiempos Headline', serif;
-  font-weight: lighter;
-}
-
-.text-center {
-  text-align: center;
-  font-family: 'Avenir', sans-serif;
-}
-
-.text-small {
-  font-family: 'Avenir', sans-serif;
-  font-size: 0.7rem;
-}
-
-#text1 {
-  font-size: 0.7rem;
-  line-height: 1.5rem;
-}
-
-#text2,
-#text3 {
-  line-height: 2.5rem;
-}
-
-#text4 {
-  font-family: 'Avenir', sans-serif;
-  font-size: 0.8rem;
-  line-height: 1.3rem;
-}
-
-#text5 {
-  line-height: 0.5rem;
-}
-
-.text-chunk {
-  width: 20rem;
-  text-align: center;
 }
 
 .button-box {
@@ -179,7 +174,7 @@
   top: 2.5rem;
 }
 
-.canvas-heading {
+.canvas-logo {
   width: 7rem;
 }
 
