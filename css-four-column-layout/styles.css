@@ -19,12 +19,12 @@ body {
   flex-basis: 20%;
 }
 
-.img-container1 {
+.screen-container {
   width: 18rem;
   margin: auto;
 }
 
-.img-container2 {
+.icon-container {
   width: 4rem;
   margin: auto;
 }
