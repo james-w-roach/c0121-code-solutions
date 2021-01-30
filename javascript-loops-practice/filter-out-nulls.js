@@ -3,12 +3,10 @@ function filterOutNulls(values) {
   var withoutNull = [];
   var i = 0;
   while (i < values.length) {
-    if (values[i] === null) {
-      i++;
-    } else {
+    if (values[i] !== null) {
       withoutNull.push(values[i]);
-      i++;
     }
+    i++;
   }
   return withoutNull;
 }

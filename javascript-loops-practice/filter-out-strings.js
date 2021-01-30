@@ -3,12 +3,10 @@ function filterOutStrings(values) {
   var withoutStrings = [];
   var i = 0;
   while (i < values.length) {
-    if (typeof values[i] === 'string') {
-      i++;
-    } else {
+    if (typeof values[i] !== 'string') {
       withoutStrings.push(values[i]);
-      i++;
     }
+    i++;
   }
   return withoutStrings;
 }
