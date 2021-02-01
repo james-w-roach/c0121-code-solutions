@@ -1,9 +1,9 @@
 /* exported getWords */
 function getWords(string) {
-  if (string.length > 2) {
+  if (string.length > 0) {
     var array = string.split(' ');
   } else {
-    array = string.split();
+    array = string.split('');
   }
   return array;
 }
