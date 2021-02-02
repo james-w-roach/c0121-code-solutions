@@ -1,14 +1,13 @@
 /* exported truncate */
 function truncate(length, string) {
+  if (string.length < length) {
+    return string + '...';
+  }
   var truncated = '';
   var i = 0;
-  if (string.length < length) {
-    truncated = string;
-  } else {
-    while (i < length) {
-      truncated += string[i];
-      i++;
-    }
+  while (i < length) {
+    truncated += string[i];
+    i++;
   }
   truncated += '...';
   return truncated;
