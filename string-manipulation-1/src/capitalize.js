@@ -5,11 +5,10 @@ function capitalize(word) {
   while (i < word.length) {
     if (i === 0) {
       newWord += word[i].toUpperCase();
-      i++;
     } else {
       newWord += word[i].toLowerCase();
-      i++;
     }
+    i++;
   }
   return newWord;
 }

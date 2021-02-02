@@ -5,9 +5,8 @@ function isVowel(character) {
   while (i < vowels.length) {
     if (vowels[i] === character) {
       return true;
-    } else {
-      i++;
     }
+    i++;
   }
   return false;
 }
