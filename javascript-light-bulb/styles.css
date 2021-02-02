@@ -1,0 +1,31 @@
+.light {
+  background-color: lightgoldenrodyellow;
+}
+
+.on {
+  background-color: rgb(241, 233, 111);
+  box-shadow: 0 0 0 0.3rem rgb(247, 247, 195);
+  border-radius: 50%;
+  width: 20rem;
+  height: 20rem;
+}
+
+.dark {
+  background-color: rgb(10, 10, 10);
+}
+
+.off {
+  background-color: rgb(48, 46, 46);
+  box-shadow: 0 -0.5rem 0 0.5rem rgb(5, 5, 5);
+  border-radius: 50%;
+  width: 20rem;
+  height: 20rem;
+}
+
+.container {
+  margin: auto;
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
