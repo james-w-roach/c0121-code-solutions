@@ -33,6 +33,7 @@
   height: 14rem;
   border-radius: 0.2rem;
   margin: auto;
+  text-align: center;
 }
 
 .no {
@@ -43,7 +44,6 @@
   text-align: center;
   border-style: none;
   outline: none;
-  margin: 1rem 11rem;
   box-shadow: 0 0.1rem 0.1rem rgb(138, 138, 138);
 }
 
@@ -52,8 +52,7 @@
 }
 
 .survey {
-  text-align: center;
-  margin-top: 3rem;
+  margin: 2.8rem 0;
 }
 
 .overlay {
