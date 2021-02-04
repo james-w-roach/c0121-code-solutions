@@ -58,31 +58,38 @@ var pokedex = [
 ];
 
 function renderPokemon(pokemon) {
-  var third = document.createElement('div');
-  third.className = 'column-third';
-  var card = document.createElement('div');
-  card.className = 'pokemon-card';
-  third.appendChild(card);
-  var image = document.createElement('img');
-  image.setAttribute('src', pokemon.imageUrl);
-  card.appendChild(image);
-  var text = document.createElement('div');
-  text.className = 'pokemon-card-text';
-  card.appendChild(text);
-  var header2 = document.createElement('h2');
-  header2.textContent = pokemon.name;
-  text.appendChild(header2);
-  var header3 = document.createElement('h3');
-  header3.textContent = pokemon.number;
-  text.appendChild(header3);
-  var par = document.createElement('p');
-  par.textContent = pokemon.description;
-  text.appendChild(par);
-  return third;
+  var $third = document.createElement('div');
+  $third.className = 'column-third';
+
+  var $card = document.createElement('div');
+  $card.className = 'pokemon-card';
+  $third.appendChild($card);
+
+  var $image = document.createElement('img');
+  $image.setAttribute('src', pokemon.imageUrl);
+  $card.appendChild($image);
+
+  var $text = document.createElement('div');
+  $text.className = 'pokemon-card-text';
+  $card.appendChild($text);
+
+  var $header2 = document.createElement('h2');
+  $header2.textContent = pokemon.name;
+  $text.appendChild($header2);
+
+  var $header3 = document.createElement('h3');
+  $header3.textContent = pokemon.number;
+  $text.appendChild($header3);
+
+  var $par = document.createElement('p');
+  $par.textContent = pokemon.description;
+  $text.appendChild($par);
+
+  return $third;
 }
 
-var row = document.querySelector('.row');
+var $row = document.querySelector('.row');
 
 for (var i = 0; i < pokedex.length; i++) {
-  row.appendChild(renderPokemon(pokedex[i]));
+  $row.appendChild(renderPokemon(pokedex[i]));
 }
