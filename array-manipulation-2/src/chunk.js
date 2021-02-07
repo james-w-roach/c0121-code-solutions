@@ -4,18 +4,22 @@ function chunk(array, size) {
   var subArray = [];
   var i = 0;
   while (i <= array.length) {
-    if (subArray.length !== size) {
+    if (subArray.length < size) {
       subArray.push(array[i]);
-    } else if (array[i] === array[array.length - 1] && subArray.length < size) {
-      subArray = [];
-      subArray.push(array[i]);
-      array2.push(array[i]);
     } else {
       array2.push(subArray);
       subArray = [];
       subArray.push(array[i]);
     }
     i++;
+  }
+  subArray = [];
+  var extra = (array.length % size);
+  if (extra > 0) {
+    for (extra; extra > 0; extra--) {
+      subArray.push(array[array.length - extra]);
+    }
+    array2.push(subArray);
   }
   return array2;
 }
