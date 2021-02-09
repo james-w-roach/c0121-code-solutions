@@ -1,9 +1,13 @@
 /* exported pick */
 function pick(source, keys) {
   var object2 = {};
-  for (var i = 0; i < source.length; i++) {
-    if (source[i] === keys) {
-      object2 += source[i];
+  var i = 0;
+  while (i < keys.length) {
+    for (var property in source) {
+      if (property === keys[i]) {
+        object2 += property;
+        object2.property.value = property.value;
+      }
     }
     i++;
   }
