@@ -1,15 +1,14 @@
 /* exported pick */
 function pick(source, keys) {
   var object2 = {};
-  var i = 0;
-  while (i < keys.length) {
-    for (var property in source) {
-      if (property === keys[i]) {
-        object2 += property;
-        object2.property.value = property.value;
+  for (var i = 0; i < keys.length; i++) {
+    for (var key in source) {
+      if (source[key] === undefined) {
+        continue;
+      } else if (key === keys[i]) {
+        object2[key] = source[key];
       }
     }
-    i++;
   }
   return object2;
 }
