@@ -5,7 +5,7 @@ function omit(source, keys) {
     for (var i = 0; i < keys.length; i++) {
       if (key !== keys[i]) {
         object2[key] = source[key];
-      } else if (key === keys[i]) {
+      } else {
         keys.splice(i, 1);
       }
     }
