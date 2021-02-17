@@ -36,9 +36,5 @@ Account.prototype.getBalance = function (amount) {
     }
   }
   var balance = depositSum - withdrawalSum;
-  if (depositSum === 0) {
-    return 0;
-  } else {
-    return balance;
-  }
+  return balance;
 };
