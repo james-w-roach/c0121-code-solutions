@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Carousel</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+      <div class="button-overlay">
+        <div class="row chevron-row">
+          <div class="column">
+            <i id="left" class="chevron fas fa-chevron-left"></i>
+          </div>
+          <div class="img-container">
+            <img src="images/001.png" class="image">
+            <img src="images/004.png" class="image hidden">
+            <img src="images/007.png" class="image hidden">
+            <img src="images/025.png" class="image hidden">
+            <img src="images/039.png" class="image hidden">
+          </div>
+          <div class="column">
+            <i id="right" class="chevron fas fa-chevron-right"></i>
+          </div>
+        </div>
+        <div class="row buttons">
+          <div class="column">
+            <div class="dot-buttons">
+              <i id ="0" class="fas fa-circle"></i>
+              <i id="1" class="far fa-circle"></i>
+              <i id="2" class="far fa-circle"></i>
+              <i id="3" class="far fa-circle"></i>
+              <i id="4" class="far fa-circle"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

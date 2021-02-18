@@ -1,0 +1,62 @@
+.container {
+  width: 40rem;
+  height: 20rem;
+  margin: auto;
+}
+
+.box {
+  border: solid black;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.button-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.row {
+  display: flex;
+}
+
+.chevron-row {
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 2rem;
+  height: 90%;
+}
+
+.chevron {
+  font-size: 2rem;
+}
+
+.chevron:hover {
+  cursor: pointer;
+}
+
+.buttons {
+  justify-content: center;
+}
+
+. .column {
+  flex-basis: 33%;
+  text-align: center;
+}
+
+.img-container {
+  margin: 0 4rem;
+  padding: 0;
+  height: 15rem;
+}
+
+.image {
+  height: 100%;
+}
+
+.hidden {
+  display: none;
+}
