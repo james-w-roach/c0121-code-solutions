@@ -6,6 +6,7 @@ function isAnagram(firstString, secondString) {
     for (var j = 0; j < firstString.length; j++) {
       if (secondString[i] === firstString[j]) {
         match += secondString[i];
+        firstString[j] = '1';
       }
     }
     i++;
