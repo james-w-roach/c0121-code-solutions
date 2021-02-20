@@ -1,6 +1,5 @@
 /* exported isAnagram */
 function isAnagram(firstString, secondString) {
-  // im desperate at this point
   var array = [];
   var match = '';
   var i = 0;
