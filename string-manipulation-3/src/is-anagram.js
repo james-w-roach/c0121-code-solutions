@@ -1,15 +1,25 @@
 /* exported isAnagram */
 function isAnagram(firstString, secondString) {
+  // im desperate at this point
+  var array = [];
   var match = '';
   var i = 0;
   while (i < secondString.length) {
-    for (var j = 0; j < firstString.length; j++) {
-      if (secondString[i] === firstString[j]) {
-        match += secondString[i];
-        firstString[j] = '1';
-      }
+    if (secondString[i] !== ' ') {
+      array.push(secondString[i]);
     }
     i++;
+  }
+  var j = 0;
+  while (j < array.length) {
+    for (var k = 0; k < firstString.length; k++) {
+      if (firstString[k] === array[j]) {
+        match += firstString[k];
+        array.splice(j, 1);
+        j--;
+      }
+    }
+    j++;
   }
   return match;
 }
