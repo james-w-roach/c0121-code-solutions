@@ -5,8 +5,6 @@ var $images = document.querySelector('.img-container');
 var imgKids = $images.children;
 var buttonKids = $buttons.children;
 
-// var images = ['images/001.png', 'images/004.png', 'images/007.png', 'images/025.png', 'images/039.png']; //
-
 var i = 0;
 
 function imageTimer() {
@@ -68,6 +66,3 @@ function changeImage(event) {
 }
 
 $box.addEventListener('click', changeImage);
-
-// event.target.className = 'fas fa-circle';
-// imgKids[event.target.getAttribute('id')].className = 'image';
