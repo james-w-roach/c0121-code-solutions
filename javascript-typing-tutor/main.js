@@ -8,8 +8,12 @@ function type(event) {
   if (chars.children[i].textContent !== event.key) {
     chars.children[i].className = 'incorrect current';
   } else {
-    chars.children[i].className = 'correct';
-    chars.children[i + 1].className = 'current';
+    if (i !== chars.children.length - 1) {
+      chars.children[i].className = 'correct';
+      chars.children[i + 1].className = 'current';
+    } else {
+      chars.children[i].className = 'correct';
+    }
     i++;
   }
 }
