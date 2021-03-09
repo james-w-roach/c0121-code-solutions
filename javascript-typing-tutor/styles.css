@@ -1,0 +1,17 @@
+h1 {
+  margin: 15rem auto;
+  text-align: center;
+  font-family: monospace;
+}
+
+.correct {
+  color: green;
+}
+
+.incorrect {
+  color: red;
+}
+
+.current {
+  border-bottom: solid;
+}
