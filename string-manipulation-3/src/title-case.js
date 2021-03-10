@@ -2,10 +2,8 @@
 function titleCase(string) {
   var titleString = '';
   var currentWord = '';
-  for (var i = 0; i < string.length; i++) {
-    if (string[i] !== ' ') {
-      currentWord += string[i];
-    } else {
+  for (var i = 0; i <= string.length; i++) {
+    if (string[i] === ' ' || i === string.length) {
       if (currentWord.length <= 3) {
         titleString += currentWord;
         currentWord = '';
@@ -16,6 +14,11 @@ function titleCase(string) {
         }
         currentWord = '';
       }
+      if (string[i] === ' ') {
+        titleString += ' ';
+      }
+    } else {
+      currentWord += string[i];
     }
   }
   return titleString;
