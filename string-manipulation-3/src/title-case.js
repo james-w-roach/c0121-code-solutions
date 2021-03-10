@@ -1,24 +1,13 @@
 /* exported titleCase */
 function titleCase(string) {
   var titleString = '';
-  var currentWord = '';
-  for (var i = 0; i <= string.length; i++) {
-    if (string[i] === ' ' || i === string.length) {
-      if (currentWord.length <= 3) {
-        titleString += currentWord;
-        currentWord = '';
-      } else {
-        titleString += currentWord[0].toUpperCase();
-        for (var j = 1; j < currentWord.length; j++) {
-          titleString += currentWord[j];
-        }
-        currentWord = '';
-      }
-      if (string[i] === ' ') {
-        titleString += ' ';
-      }
+  var words = string.split(' ');
+  for (var i = 0; i < words.length; i++) {
+    if (words[i].length < 3) {
+      titleString += words[i];
     } else {
-      currentWord += string[i];
+      titleString += words[i][0].toUpperCase();
+      titleString += words[i].slice(1);
     }
   }
   return titleString;
