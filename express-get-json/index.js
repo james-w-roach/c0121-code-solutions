@@ -28,7 +28,7 @@ const grades = {
 }
 
 app.get('/api/grades', (req, res) => {
-  output = [];
+  const output = [];
   for (key in grades) {
     output.push(grades[key]);
   }
