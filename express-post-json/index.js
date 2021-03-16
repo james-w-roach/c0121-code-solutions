@@ -23,6 +23,6 @@ app.use(express.json());
 app.post('/api/grades', (req, res) => {
   req.body.id = nextId;
   grades[nextId] = req.body;
-  res.json(grades[nextId]);
+  res.status(201).json(grades[nextId]);
   nextId++;
 });
