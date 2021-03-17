@@ -7,15 +7,11 @@
     },
     "5": {
       "id": 5,
-      "content": "In JavaScript, the value of `this` is determined when a function is called; not when it is defined."
+      "content": "Hello, world!"
     },
     "6": {
       "id": 6,
       "content": "A closure is formed when a function retains access to variables in its lexical scope."
-    },
-    "11": {
-      "content": "Hello, World!",
-      "id": 11
     }
   }
 }
