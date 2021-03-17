@@ -22,13 +22,9 @@ app.get('/api/notes/:id', (req, res) => {
   if (parseInt(req.params.id, 10) < 0) {
     res.status(400).json({ error: 'id must be a positive integer' });
   } else {
-    for (const key in data.notes) {
-      if (req.params.id === key) {
-        var match = true;
-        res.status(200).json(data.notes[key]);
-      }
-    }
-    if (!match) {
+    if (data.notes[req.params.id]) {
+      res.status(200).json(data.notes[req.params.id]);
+    } else {
       res.status(404).json({ error: `cannot find note with id ${parseInt(req.params.id, 10)}` });
     }
   }
@@ -44,10 +40,12 @@ app.post('/api/notes', (req, res) => {
     data.nextId++;
     fs.writeFile('data.json', `${JSON.stringify(data, null, 2)}`, err => {
       if (err) {
-        throw res.status(500).json({ error: 'an unexpected error occurred' });
+        console.error(err);
+        res.status(500).json({ error: 'an unexpected error occurred' });
+      } else {
+        res.status(201).json(data.notes[id]);
       }
     });
-    res.status(201).json(data.notes[id]);
   }
 });
 
@@ -55,19 +53,17 @@ app.delete('/api/notes/:id', (req, res) => {
   if (parseInt(req.params.id, 10) < 0) {
     res.status(400).json({ error: 'id must be a positive integer' });
   } else {
-    for (const key in data.notes) {
-      if (req.params.id === key) {
-        var match = true;
-        delete data.notes[key];
-        fs.writeFile('data.json', `${JSON.stringify(data, null, 2)}`, err => {
-          if (err) {
-            throw res.status(500).json({ error: 'an unexpected error occurred' });
-          }
-        });
-        res.sendStatus(204);
-      }
-    }
-    if (!match) {
+    if (data.notes[req.params.id]) {
+      delete data.notes[req.params.id];
+      fs.writeFile('data.json', `${JSON.stringify(data, null, 2)}`, err => {
+        if (err) {
+          console.error(err);
+          res.status(500).json({ error: 'an unexpected error occurred' });
+        } else {
+          res.sendStatus(204);
+        }
+      });
+    } else {
       res.status(404).json({ error: `cannot find note with id ${parseInt(req.params.id, 10)}` });
     }
   }
@@ -79,19 +75,17 @@ app.put('/api/notes/:id', (req, res) => {
   } else if (!req.body.content) {
     res.status(400).json({ error: 'content is a required field' });
   } else {
-    for (const key in data.notes) {
-      if (req.params.id === key) {
-        var match = true;
-        data.notes[key].content = req.body.content;
-        fs.writeFile('data.json', `${JSON.stringify(data, null, 2)}`, err => {
-          if (err) {
-            throw res.status(500).json({ error: 'an unexpected error occurred' });
-          }
-        });
-        res.status(200).json(data.notes[key]);
-      }
-    }
-    if (!match) {
+    if (data.notes[req.params.id]) {
+      data.notes[req.params.id].content = req.body.content;
+      fs.writeFile('data.json', `${JSON.stringify(data, null, 2)}`, err => {
+        if (err) {
+          console.error(err);
+          res.status(500).json({ error: 'an unexpected error occurred' });
+        } else {
+          res.status(200).json(data.notes[req.params.id]);
+        }
+      });
+    } else {
       res.status(404).json({ error: `cannot find note with id ${parseInt(req.params.id, 10)}` });
     }
   }
