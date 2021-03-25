@@ -1,0 +1,38 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  border-radius: 1rem;
+  width: 3.5rem;
+  height: 2rem;
+  background-color: gray;
+  margin-right: 1rem;
+}
+
+.switch {
+  display: flex;
+  align-items: center;
+}
+
+.green {
+  background-color: rgb(65, 178, 53);
+}
+
+.slider {
+  color: white;
+  outline: none;
+  border-radius: 1rem;
+  height: 2rem;
+  width: 2rem;
+  border: solid lightgray;
+}
+
+.off {
+  transition: 0.2s;
+}
+
+.on {
+  transform: translate(1.5rem);
+  transition: 0.2s;
+}
