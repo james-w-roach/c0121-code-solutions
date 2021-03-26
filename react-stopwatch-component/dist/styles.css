@@ -1,9 +1,14 @@
-.circle {
+.watch {
   width: 5rem;
   height: 5rem;
-  border-radius: 2.5rem;
+  border-radius: 50%;
   border: solid black;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.fas {
+  margin-left: 2.3rem;
+  margin-top: 1rem;
 }
