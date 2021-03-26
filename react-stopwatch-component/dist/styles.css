@@ -1,0 +1,9 @@
+.circle {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 2.5rem;
+  border: solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
