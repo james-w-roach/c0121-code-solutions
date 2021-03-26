@@ -65,6 +65,4 @@ class Stopwatch extends React.Component {
   }
 }
 
-const stopwatch = <Stopwatch />;
-
-export default stopwatch;
+export default Stopwatch;
