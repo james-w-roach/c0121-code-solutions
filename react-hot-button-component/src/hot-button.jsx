@@ -1,20 +1,17 @@
 import React from 'react';
 
-let clicks = 0;
-
 class HotButton extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      buttonClicks: clicks
+      buttonClicks: 0
     };
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick() {
-    clicks++;
     this.setState({
-      buttonClicks: clicks
+      buttonClicks: this.state.buttonClicks + 1
     });
   }
 
