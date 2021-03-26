@@ -1,0 +1,31 @@
+.cold {
+  background-color: rgb(49, 78, 222);
+  color: white;
+}
+
+.cool {
+  background-color: rgb(123, 42, 193);
+  color: white;
+}
+
+.lukewarm {
+  background-color: rgb(191, 40, 191);
+  color: white;
+}
+
+.warm {
+  background-color: orangered;
+  color: white;
+}
+
+.hot {
+  background-color: orange;
+}
+
+.burning {
+  background-color: yellow;
+}
+
+.white-hot {
+  background-color: white;
+}
