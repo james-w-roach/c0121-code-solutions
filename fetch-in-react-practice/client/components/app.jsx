@@ -38,10 +38,18 @@ export default class App extends React.Component {
     * and specify the "Content-Type" header as "application/json"
     */
     fetch('/api/todos', {
-      method: 'POST'
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(newTodo)
     })
       .then(res => res.json())
-      .then(todos => this.setState({ todos }));
+      .then(todo => {
+        const newTodos = this.state.todos.slice();
+        newTodos.push(todo);
+        this.setState({ todos: newTodos });
+      });
   }
 
   toggleCompleted(todoId) {
@@ -59,6 +67,32 @@ export default class App extends React.Component {
      * TIP: Be sure to SERIALIZE the updates in the body with JSON.stringify()
      * And specify the "Content-Type" header as "application/json"
      */
+    let index;
+    let i = 0;
+    while (i < this.state.todos.length) {
+      if (this.state.todos[i].todoId === todoId) {
+        index = i;
+        break;
+      }
+      i++;
+    }
+    const isCompleted = this.state.todos[index].isCompleted;
+    const toggle = {
+      isCompleted: !isCompleted
+    };
+    fetch(`/api/todos/${todoId}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(toggle)
+    })
+      .then(res => res.json())
+      .then(updated => {
+        const newTodoList = this.state.todos.slice();
+        newTodoList[index] = updated;
+        this.setState({ todos: newTodoList });
+      });
   }
 
   render() {
