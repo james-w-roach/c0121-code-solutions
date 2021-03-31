@@ -49,7 +49,38 @@ app.post('/api/auth/sign-in', (req, res, next) => {
   }
 
   /* your code starts here */
-
+  const sql = `
+   select "userId",
+          "hashedPassword"
+     from "users"
+    where "username" = $1;
+  `;
+  const params = [username];
+  db.query(sql, params)
+    .then(result => {
+      if (!result.rows[0]) {
+        throw new ClientError(401, 'invalid login error');
+      }
+      argon2
+        .verify(result.rows[0].hashedPassword, password)
+        .then(isMatching => {
+          if (!isMatching) {
+            throw new ClientError(401, 'invalid login error');
+          }
+          const payload = {
+            userId: result.rows[0].userId,
+            username: username
+          };
+          const token = jwt.sign(payload, process.env.TOKEN_SECRET);
+          const response = {
+            token: token,
+            payload: payload
+          };
+          res.status(201).json(response);
+        })
+        .catch(err => next(err));
+    })
+    .catch(err => next(err));
   /**
    * Query the database to find the "userId" and "hashedPassword" for the "username".
    * Then, 😉
