@@ -1,0 +1,30 @@
+User can sign up:
+When the user clicks on "Register now", the render method in auth-form.jsx is run,
+changing the hash, button text, and action text. Every time the value changes in either
+form text box, the handleChange method changes the corresponsing state property
+values. Once submit is pressed, handleSubmit destructures the action property of props,
+which is 'sign-up' in this case, and performs a fetch request with method POST. This
+destructures the username and password from the request body, creates a hashed password with argon2,
+submits the username and hashedpassword into the database, and returns a 201 status code
+and the user variable, which contains userId, username, and createdAt. handlesubmit
+then switches the window hash to the sign in page because action = "sign-up".
+
+User can sign in:
+Similar to signing up, except since action will equal "sign-in," the post function will be different.
+In this case, the sign-in app.post function checks the database for a matching username and pw,
+assigns the matching pair to the variable user, uses argon2.verify to create a token const variable,
+and then sends the token and the user object back in the result. HandleSubmit checks for both, then
+passes the result to the onSignIn method.
+
+User can stay signed in:
+The user is able to stay signed in because the handleSignIn method of the App class takes the result
+passed to the onSignIn method, destructures it into a user and a token variable, then sets the user
+property of state to the user variable and puts the token in local storage so refreshing doesn't
+sign them out. The componentDidMount method then changes the isAuthorizing property to false once the
+user is authorized, and since window.location.hash is '', the home page is rendered.
+
+User can sign out:
+The navbar class contains an onClick prop for the sign out button, which uses the handleSignOut method
+of the App class as an expression. So once the user clicks sign out, handleSignOut removes the token
+from local storage and sets the user property of state to null. Since the user property is falsy now,
+the user is then redirected to the sign-in page.
